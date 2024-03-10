@@ -63,6 +63,14 @@ body {
   color: var(--color-text);
 }
 
+.product
+{
+  background-image: src('./product.png');
+  width: 100%;
+  height:100dvh;
+
+}
+
 button {
   background: var(--color-button);
   border: 1px solid currentColor;
