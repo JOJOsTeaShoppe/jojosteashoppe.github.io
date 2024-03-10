@@ -1,4 +1,18 @@
-
-<body background="./IMG_4617.jpeg" background-size='cover' no-repeat fixed>
+<style>
+  .bg{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    min-width: 1000px;/*min-width是为了实现让屏幕宽度在1000px以内时，div的大小保持不变,缩放屏幕宽度时，图片不要缩放*/
+    z-index:-10;/*因为背景图片应该放在最下方，所以设置一个层级*/
+    zoom: 1;
+    background: url("img/b8c22095eda02839c25ae158843c6aa1.jpeg") no-repeat center center ;/*背景图路径 背景图不平铺 背景图垂直、水平均居中 */
+    background-size:100% 100%; /* ---按容器比例撑满，图片变形；*/
+    background-attachment:fixed; /* 当内容高度大于图片高度时，背景图像的位置相对于 可视窗口 固定，此条属性必须设置 */
+  }
+</style>
+<body class='bg'>
   Opening on March 15,2024
 </body>
