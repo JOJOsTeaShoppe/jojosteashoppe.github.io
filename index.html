@@ -11,22 +11,99 @@
 <!-- partial:index.partial.html -->
 <div class="intro">
 
-  <div >
+  <div class="info">
   <h2> JOJO TEA SHOPPE </h2>
   <h2> opening on </h2>
   <h1>Mar,15,2024</h1>
   <p>We focus on offering high-quality tea and fresh ingredients to create surprising and delicious beverages.
-</p>
+  </p>
   </div>
   	<div class="product">
 		<img class="product-img" src='./product.png'>
 	</div>
 </div>
 
+<div class="activity">
+	<div class=units>
+	<div>Opening Activity</div>
+	<div>Opening Activity</div>
+</div>
+<!-- 	<img class="activity-img" src='./activity.png'></div>
+ -->
+ 	<p>Promotion Time : 03/15/2024-05/15/2024</p>
+ 	<p>Enjoy a lifetime 10% Discount</p>
+ 	<p>Full Cashback on First Order</p>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="shop1.jpeg" style="width:100%">
+  <div class="text">Counter</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="shop2.jpeg" style="width:100%">
+  <div class="text">Dining Zone</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="shop3.jpeg" style="width:100%">
+  <div class="text">Lobby</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="shop4.jpeg" style="width:100%">
+  <div class="text">Order Zone</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+<div class="address">
+	<p>909-244-0245</p>
+	<p>9779 Base Line Rd, Rancho Cucamonga, CA</p>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206.43792875355794!2d-117.59169386420321!3d34.12057410411273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c33663e2ee35bb%3A0xe72701fa9a9307e5!2s9779%20Base%20Line%20Rd%2C%20Rancho%20Cucamonga%2C%20CA%2091730!5e0!3m2!1sen!2sus!4v1710142341773!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
 <!-- spacing to allow scroll -->
 <div style="height:500vw;"></div>
 <!-- partial -->
   <script type="module" src="./script.js"></script>
+  <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 
 </body>
 </html>
