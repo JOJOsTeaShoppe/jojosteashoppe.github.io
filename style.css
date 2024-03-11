@@ -64,6 +64,7 @@ canvas {
     margin: auto;
     text-align: center;
     margin-top: 10%;
+	 z-index: 1;
 }
 
 .activity{
@@ -73,6 +74,7 @@ canvas {
     text-align: left;
     margin-top: 75%;
     width: 60%;
+	 z-index: 1;
 }
 
 .activity-img
@@ -80,7 +82,7 @@ canvas {
     position: relative;
     width: 100%;
     height: auto;
-    z-index: -1;
+
   }
 
 h1 {
@@ -165,6 +167,7 @@ button:hover, button:focus-visible {
   max-width: 1000px;
   position: relative;
   margin: auto;
+	 z-index: 1;
 }
 
 /* Caption text */
@@ -228,6 +231,7 @@ button:hover, button:focus-visible {
   -webkit-user-select: none;
   pointer-events: none;
   padding: 0 10px;
+	 z-index: 1;
 }
 /* original design */
 .units > * {
