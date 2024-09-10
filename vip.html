@@ -25,6 +25,46 @@
             color: #fff;
         }
 
+        .vip-level-sheet {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .vip-level-sheet table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .vip-level-sheet table th, .vip-level-sheet table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .vip-level-sheet table th {
+            background-color: #f0f0f0;
+        }
+
+        .privileges {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .privileges ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .privileges li {
+            padding: 10px 0;
+        }
+
         /* Slider styles */
         .slider {
             position: relative;
@@ -63,171 +103,13 @@
             padding: 10px;
             cursor: pointer;
         }
-
-        /* VIP Level */
-        .vip-level {
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-            text-align: center;
-        }
-
-        .bronze-level {
-            background-color: #CD7F32;
-        }
-
-        .silver-level {
-            background-color: #C0C0C0;
-        }
-
-        .gold-level {
-            background-color: #FFD700;
-        }
-
-        .platinum-level {
-            background-color: #E5E4E2;
-        }
-
-        .diamond-level {
-            background-color: #4169E1;
-        }
-
-        .vip-charge {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .charge-item {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .create-order {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-
-        .vip-level-sheet {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 30px;
-        }
-
-        .vip-level-sheet table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .vip-level-sheet table th, .vip-level-sheet table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .vip-level-sheet table th {
-            background-color: #f0f0f0;
-        }
     </style>
 </head>
 <body>
 
 <div class="vip-container">
     <div class="vip-header">
-        <h1>Welcome to the VIP System</h1>
-        <p>Select your VIP level and charge products!</p>
-    </div>
-
-    <!-- Image Slider -->
-    <div class="slider">
-        <div class="slides" id="slides">
-            <img src="bronze-card.jpg" alt="Bronze VIP Card">
-            <img src="silver-card.jpg" alt="Silver VIP Card">
-            <img src="gold-card.jpg" alt="Gold VIP Card">
-            <img src="platinum-card.jpg" alt="Platinum VIP Card">
-            <img src="diamond-card.jpg" alt="Diamond VIP Card">
-        </div>
-        <div class="slider-nav">
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
-        </div>
-    </div>
-
-    <!-- VIP Levels -->
-    <div class="vip-level bronze-level">
-        <h2>Bronze Level</h2>
-        <p>Privileges: Access to basic offers and rewards.</p>
-    </div>
-
-    <div class="vip-level silver-level">
-        <h2>Silver Level</h2>
-        <p>Privileges: Extra discounts and special deals.</p>
-    </div>
-
-    <div class="vip-level gold-level">
-        <h2>Gold Level</h2>
-        <p>Privileges: Free shipping and higher discounts.</p>
-    </div>
-
-    <div class="vip-level platinum-level">
-        <h2>Platinum Level</h2>
-        <p>Privileges: Priority support, early access to new products.</p>
-    </div>
-
-    <div class="vip-level diamond-level">
-        <h2>Diamond Level</h2>
-        <p>Privileges: All-inclusive VIP services, maximum rewards, and perks.</p>
-    </div>
-
-    <!-- VIP Charge Products -->
-    <div class="vip-charge">
-        <h3>Charge Products</h3>
-        <div class="charge-item">
-            <p>Charge $100 - Get $20 more</p>
-        </div>
-        <div class="charge-item">
-            <p>Charge $200 - Get $50 more</p>
-        </div>
-        <div class="charge-item">
-            <p>Charge $500 - Get $150 more</p>
-        </div>
-    </div>
-
-    <!-- Create VIP Charge Order -->
-    <div class="create-order">
-        <h3>Create a VIP Charge Order</h3>
-        <form>
-            <select name="vip-level" id="vip-level">
-                <option value="bronze">Bronze</option>
-                <option value="silver">Silver</option>
-                <option value="gold">Gold</option>
-                <option value="platinum">Platinum</option>
-                <option value="diamond">Diamond</option>
-            </select>
-            <br><br>
-            <button type="button" onclick="alert('Order Created')">Create Order</button>
-        </form>
+        <h1>VIP Level and Privileges</h1>
     </div>
 
     <!-- VIP Level Sheet -->
@@ -271,15 +153,53 @@
         </table>
     </div>
 
+    <!-- Privileges Explanation -->
+    <div class="privileges">
+        <h3>Privileges Explanation</h3>
+        <ul>
+            <li><strong>Welcome Bonus:</strong> A small gift or discount for joining the VIP program.</li>
+            <li><strong>Free Shipping:</strong> Free standard shipping on all orders.</li>
+            <li><strong>Discount on Purchases:</strong> A percentage discount applied automatically to every purchase.</li>
+            <li><strong>Access to Special Sales:</strong> Early or exclusive access to sales that are not available to non-VIP members.</li>
+            <li><strong>Priority Customer Support:</strong> Faster response times from customer support teams.</li>
+            <li><strong>Exclusive Product Access:</strong> Early or exclusive access to limited edition products.</li>
+            <li><strong>Birthday Gift:</strong> A special gift or discount on the customer’s birthday.</li>
+            <li><strong>Early Access to New Products:</strong> VIPs get to purchase new products before they are available to the general public.</li>
+            <li><strong>Personal Account Manager:</strong> A dedicated representative to handle queries and provide personalized recommendations.</li>
+            <li><strong>Invitation to VIP Events:</strong> Invitations to exclusive events like product launches, meet-and-greets, or special shopping experiences.</li>
+        </ul>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides" id="slides">
+            <img src="bronze-card.jpg" alt="Bronze VIP Card">
+            <img src="silver-card.jpg" alt="Silver VIP Card">
+            <img src="gold-card.jpg" alt="Gold VIP Card">
+            <img src="platinum-card.jpg" alt="Platinum VIP Card">
+            <img src="diamond-card.jpg" alt="Diamond VIP Card">
+        </div>
+        <div class="slider-nav">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
 </div>
 
 <script>
     let currentSlide = 0;
-    const slides = document.getElementById('slides');
-    const totalSlides = slides.children.length;
 
-    function showSlide(index) {
-        currentSlide = (index + totalSlides) % totalSlides;
+    function showSlide(slideIndex) {
+        const slides = document.getElementById('slides');
+        const totalSlides = slides.children.length;
+        if (slideIndex >= totalSlides) {
+            currentSlide = 0;
+        } else if (slideIndex < 0) {
+            currentSlide = totalSlides - 1;
+        } else {
+            currentSlide = slideIndex;
+        }
         slides.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 
