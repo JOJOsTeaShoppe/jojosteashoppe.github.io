@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .vip-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .vip-header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Slider styles */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .prev, .next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* VIP Level */
+        .vip-level {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .bronze-level {
+            background-color: #CD7F32;
+        }
+
+        .silver-level {
+            background-color: #C0C0C0;
+        }
+
+        .gold-level {
+            background-color: #FFD700;
+        }
+
+        .platinum-level {
+            background-color: #E5E4E2;
+        }
+
+        .diamond-level {
+            background-color: #4169E1;
+        }
+
+        .vip-charge {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .charge-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .create-order {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .vip-level-sheet {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .vip-level-sheet table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .vip-level-sheet table th, .vip-level-sheet table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .vip-level-sheet table th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="vip-container">
+    <div class="vip-header">
+        <h1>Welcome to the VIP System</h1>
+        <p>Select your VIP level and charge products!</p>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides" id="slides">
+            <img src="bronze-card.jpg" alt="Bronze VIP Card">
+            <img src="silver-card.jpg" alt="Silver VIP Card">
+            <img src="gold-card.jpg" alt="Gold VIP Card">
+            <img src="platinum-card.jpg" alt="Platinum VIP Card">
+            <img src="diamond-card.jpg" alt="Diamond VIP Card">
+        </div>
+        <div class="slider-nav">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- VIP Levels -->
+    <div class="vip-level bronze-level">
+        <h2>Bronze Level</h2>
+        <p>Privileges: Access to basic offers and rewards.</p>
+    </div>
+
+    <div class="vip-level silver-level">
+        <h2>Silver Level</h2>
+        <p>Privileges: Extra discounts and special deals.</p>
+    </div>
+
+    <div class="vip-level gold-level">
+        <h2>Gold Level</h2>
+        <p>Privileges: Free shipping and higher discounts.</p>
+    </div>
+
+    <div class="vip-level platinum-level">
+        <h2>Platinum Level</h2>
+        <p>Privileges: Priority support, early access to new products.</p>
+    </div>
+
+    <div class="vip-level diamond-level">
+        <h2>Diamond Level</h2>
+        <p>Privileges: All-inclusive VIP services, maximum rewards, and perks.</p>
+    </div>
+
+    <!-- VIP Charge Products -->
+    <div class="vip-charge">
+        <h3>Charge Products</h3>
+        <div class="charge-item">
+            <p>Charge $100 - Get $20 more</p>
+        </div>
+        <div class="charge-item">
+            <p>Charge $200 - Get $50 more</p>
+        </div>
+        <div class="charge-item">
+            <p>Charge $500 - Get $150 more</p>
+        </div>
+    </div>
+
+    <!-- Create VIP Charge Order -->
+    <div class="create-order">
+        <h3>Create a VIP Charge Order</h3>
+        <form>
+            <select name="vip-level" id="vip-level">
+                <option value="bronze">Bronze</option>
+                <option value="silver">Silver</option>
+                <option value="gold">Gold</option>
+                <option value="platinum">Platinum</option>
+                <option value="diamond">Diamond</option>
+            </select>
+            <br><br>
+            <button type="button" onclick="alert('Order Created')">Create Order</button>
+        </form>
+    </div>
+
+    <!-- VIP Level Sheet -->
+    <div class="vip-level-sheet">
+        <h3>VIP Level Sheet</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>VIP Level</th>
+                <th>Charge Amount Required</th>
+                <th>Privileges</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Bronze</td>
+                <td>$0 - $99</td>
+                <td>Basic offers and rewards</td>
+            </tr>
+            <tr>
+                <td>Silver</td>
+                <td>$100 - $199</td>
+                <td>Extra discounts and special deals</td>
+            </tr>
+            <tr>
+                <td>Gold</td>
+                <td>$200 - $499</td>
+                <td>Free shipping and higher discounts</td>
+            </tr>
+            <tr>
+                <td>Platinum</td>
+                <td>$500 - $999</td>
+                <td>Priority support, early access to new products</td>
+            </tr>
+            <tr>
+                <td>Diamond</td>
+                <td>$1000+</td>
+                <td>All-inclusive VIP services, maximum rewards</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function showSlide(index) {
+        currentSlide = (index + totalSlides) % totalSlides;
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+</script>
+
+</body>
+</html>
