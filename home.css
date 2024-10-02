@@ -1,0 +1,153 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.download-button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.download-button:hover {
+    background-color: #e64a19;
+}
+
+/* Adjust top margin for content to account for fixed header */
+body {
+    margin-top: 80px; /* Adjust this value based on header height */
+}
+
+/*!* Other existing styles *!*/
+/*.background {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    filter: blur(10px);*/
+/*    z-index: -1;*/
+/*}*/
+
+
+#topScrollView {
+    /*width: 100%; !* Full viewport width *!*/
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: none; /* Remove any default border from the iframe */
+
+}
+
+#productDetails {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
+
+.footer-left {
+    width: 60%; /* Adjust as needed */
+}
+
+.footer-right {
+    width: 35%; /* Adjust as needed */
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-right p {
+    margin: 10px 0;
+}
+
+/* Map Styling */
+.footer-right iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+
+/* Modal overlay styling */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it's on top of other content */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Product image styling */
+.product-image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}

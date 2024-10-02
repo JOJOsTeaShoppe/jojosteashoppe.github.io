@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Scroll View</title>
+    <link rel="stylesheet" href="tagscroll.css">
+</head>
+<body>
+<div class="tag-scroll-view">
+    <div class="scroll-container" id="tagsContainer">
+        <!-- Tags will be dynamically added here -->
+    </div>
+</div>
+<script src="tagscroll.js"></script>
+<script>
+    // Function to send the height of the content to the parent
+    function sendHeightToParent() {
+        const height = document.body.scrollHeight;
+        window.parent.postMessage({ tagScrollViewHeight: height }, '*');
+    }
+
+    // Call the function after the content is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        sendHeightToParent();
+    });
+
+    // Call the function whenever content changes (e.g., dynamically loaded content)
+    const observer = new MutationObserver(() => {
+        sendHeightToParent();
+    });
+
+    observer.observe(document.getElementById('tagsContainer'), { childList: true, subtree: true });
+</script>
+</body>
+</html>
