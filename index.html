@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jojo Tea Shoppe - Home</title>
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="shopslide.css">
 
 </head>
 <body>
 <header class="header">
     <h1 class="header-title">Welcome to JOJO TEA SHOPPE</h1>
-    <button class="download-button">Download App</button>
+    <button class="download-button" id="downloadButton">Download App</button>
 </header>
 
 <!-- Container for the Top Scroll View -->
@@ -31,50 +30,18 @@
 <!-- Footer Section -->
 <footer class="footer">
     <div class="footer-left">
-        <!-- Slideshow Container -->
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 4</div>
-                <img src="shop1.jpeg" style="width:100%">
-                <div class="text">Counter</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 4</div>
-                <img src="shop2.jpeg" style="width:100%">
-                <div class="text">Dining Zone</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 4</div>
-                <img src="shop3.jpeg" style="width:100%">
-                <div class="text">Lobby</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 4</div>
-                <img src="shop4.jpeg" style="width:100%">
-                <div class="text">Order Zone</div>
-            </div>
-        </div>
-        <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
+        <iframe src="envslide.html" id="envslideView" width="100%" height="500px" style="border: none; margin-top: 20px;"></iframe>
     </div>
 
     <div class="footer-right">
-        <p>909-244-0245</p>
-        <p>9779 Base Line Rd, Rancho Cucamonga, CA</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206.43792875355794!2d-117.59169386420321!3d34.12057410411273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c33663e2ee35bb%3A0xe72701fa9a9307e5!2s9779%20Base%20Line%20Rd%2C%20Rancho%20Cucamonga%2C%20CA%2091730!5e0!3m2!1sen!2sus!4v1710142341773!5m2!1sen!2sus"
-                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>PHONE: 909-244-0245</p>
+        <p>ADDRESS: 9779 Base Line Rd, Rancho Cucamonga, CA</p>
+        <iframe id="googleAddressView" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206.43792875355794!2d-117.59169386420321!3d34.12057410411273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c33663e2ee35bb%3A0xe72701fa9a9307e5!2s9779%20Base%20Line%20Rd%2C%20Rancho%20Cucamonga%2C%20CA%2091730!5e0!3m2!1sen!2sus!4v1710142341773!5m2!1sen!2sus"
+                width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </footer>
 
 <script src="home.js"></script>
-<script src="envslide.js"></script>
 <script>
 
 </script>

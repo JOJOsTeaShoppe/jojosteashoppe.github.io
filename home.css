@@ -93,16 +93,6 @@ body {
     width: 35%; /* Adjust as needed */
 }
 
-.slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.mySlides img {
-    width: 100%;
-    height: auto;
-}
 
 .footer-right p {
     margin: 10px 0;

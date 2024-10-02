@@ -2,6 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchHomePageData();
 });
 
+
+// Function to send the height of the content to the parent
+function sendHeightToParent() {
+    const height = document.body.scrollHeight;
+    window.parent.postMessage({ tagScrollViewHeight: height }, '*');
+}
+
+// Call the function after the content is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    sendHeightToParent();
+});
+
+// Call the function whenever content changes (e.g., dynamically loaded content)
+const observer = new MutationObserver(() => {
+    sendHeightToParent();
+});
+
+observer.observe(document.getElementById('tagsContainer'), { childList: true, subtree: true });
+
+
 function fetchHomePageData() {
     const apiURL = 'https://api.jojoteashoppe.com/api/pages/APP_HOME';
 

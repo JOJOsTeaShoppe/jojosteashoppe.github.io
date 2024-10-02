@@ -19,6 +19,17 @@ window.addEventListener('message', (event) => {
         const tagScrollView = document.getElementById('tagScrollView');
         tagScrollView.style.height = `${event.data.tagScrollViewHeight}px`;
     }
+    if (event.data && event.data.shopSlideHeight) {
+        const envslideView = document.getElementById('envslideView');
+
+        const googleAddressView = document.getElementById('googleAddressView');
+
+        envslideView.style.height = `${event.data.shopSlideHeight}px`;
+        googleAddressView.style.height = `${event.data.shopSlideHeight}px`;
+
+    }
+
+
     if (event.data && event.data.productImage) {
         // Display the product details modal
         const productDetails = document.getElementById('productDetails');
@@ -70,3 +81,19 @@ function adjustTheViewHeight() {
 }
 
 adjustTheViewHeight()
+
+
+document.getElementById('downloadButton').addEventListener('click', function () {
+    // Check if the user is using an iOS device
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+    const universalLink = 'https://www.jojoteashoppe.com/.well-known/apple-app-site-association';
+
+    if (isIOS) {
+        // If the client is an iOS device, navigate to the App Store link
+        window.location.href = 'https://apps.apple.com/app/idXXXXXXXXX'; // Replace with your App Store link
+    } else {
+        // If not an iOS device, show an alert message
+        alert('This client currently supports only iPhone and iPad. Android support is coming soon!');
+    }
+});
