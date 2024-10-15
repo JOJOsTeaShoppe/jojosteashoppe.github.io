@@ -87,7 +87,9 @@ document.getElementById('downloadButton').addEventListener('click', function () 
     // Check if the user is using an iOS device
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
-    const universalLink = 'https://www.jojoteashoppe.com/apple-app-site-association';
+    // const universalLink = 'https://www.jojoteashoppe.com/apple-app-site-association';
+
+    const universalLink = "https://apps.apple.com/us/app/jojo-tea-shoppe/id6636472025";
 
     if (isIOS) {
         // If the client is an iOS device, navigate to the App Store link
