@@ -89,11 +89,11 @@ document.getElementById('downloadButton').addEventListener('click', function () 
 
     // const universalLink = 'https://www.jojoteashoppe.com/apple-app-site-association';
 
-    const universalLink = "https://apps.apple.com/us/app/jojo-tea-shoppe/id6636472025";
+    const universalLink = "https://apps.apple.com/app/jojo-tea-shoppe/id6636472025";
 
     if (isIOS) {
         // If the client is an iOS device, navigate to the App Store link
-        window.location.href = 'https://apps.apple.com/us/app/jojo-tea-shoppe/id6636472025'; // Replace with your App Store link
+        window.location.href = 'https://apps.apple.com/app/jojo-tea-shoppe/id6636472025'; // Replace with your App Store link
     } else {
         // If not an iOS device, show an alert message
         alert('This client currently supports only iPhone and iPad. Android support is coming soon!');
