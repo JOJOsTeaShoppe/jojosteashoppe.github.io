@@ -85,6 +85,9 @@ adjustTheViewHeight()
 
 document.getElementById('downloadButton').addEventListener('click', function () {
     // Check if the user is using an iOS device
+
+    alert(navigator.userAgent);
+    
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
     // const universalLink = 'https://www.jojoteashoppe.com/apple-app-site-association';
